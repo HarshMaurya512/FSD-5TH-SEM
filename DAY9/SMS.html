@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="SMS.css">
+</head>
+<body>
+    <center>
+        <h1>Student Management System</h1>
+    </center>
+    <div class="form">
+        
+    <p>Student Name</p>
+    <input type="text" id="studentName" placeholder="Enter student name">
+    <p>Roll No.</p>
+    <input type="text" id="rollNo" placeholder="Enter roll number">
+    <br><br>
+    <p>Course</p>
+    <input type="text" id="course" placeholder="Enter course name">
+    <p>Marks</p>
+    <input type="text" id="marks" placeholder="Enter marks">
+    <br><br>
+    <button onclick="submitForm()">Submit</button>
+    <br><br>
+    <h2>Search Student by Name or Roll No.</h2>
+    <input type="text" id="searchInput" placeholder="Search by Student Name or Roll No." onkeyup="searchStudent()">
+    <button onclick="searchStudent()">Search</button>
+    <br><br>
+    <input type="text" id="totalStudents" placeholder="Total Students: 0" readonly>
+    <input type="text" id="averageMarks" placeholder="Average Marks: 0" readonly>
+    
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Roll No.</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+                <tr>
+                    <td>2400</td>
+                    <td>John Doe</td>
+                    <td>CSE</td>
+                    <td>85</td>
+                    <td>B</td>
+                    <td>
+                    <button class="edit"
+                        onclick="editStudent(${index})">
+                        Edit
+                    </button>
+
+                    <button class="delete"
+                        onclick="deleteStudent(${index})">
+                        Delete
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                    <td>2401</td>
+                    <td>Jane Smith</td>
+                    <td>ECE</td>
+                    <td>92</td>
+                    <td>A</td>
+                    <td>
+                    <button class="edit"
+                        onclick="editStudent(${index})">
+                        Edit
+                    </button>
+
+                    <button class="delete"
+                        onclick="deleteStudent(${index})">
+                        Delete
+                    </button>
+                </td>
+                </tr>
+        </tbody>
+
+    </table>
+    </div>
+    <script src="sms.js"></script>
+</body>
+</html>
