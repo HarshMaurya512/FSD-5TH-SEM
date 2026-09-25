@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Imageslider from './Imageslider';
+import ImageRotator from './ImageRotator';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <App/>
     <Imageslider />
+    <ImageRotator />
   </React.StrictMode>
 );
 
